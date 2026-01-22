@@ -1,0 +1,70 @@
+/* =========================
+   Footer Component
+   ========================= */
+
+footer {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  padding: var(--space-6) 0;
+}
+
+.footer__content {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.footer__logo {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.footer__logo:hover {
+  color: var(--color-accent-primary);
+}
+
+.footer__links {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+}
+
+.footer__links a {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  transition: color var(--transition-base);
+}
+
+.footer__links a:hover {
+  color: var(--color-accent-primary);
+}
+
+.footer__copyright {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer__links {
+    justify-content: center;
+  }
+}
