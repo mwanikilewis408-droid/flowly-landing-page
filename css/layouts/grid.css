@@ -1,0 +1,75 @@
+/* =========================
+   Grid & Layout Helpers
+   ========================= */
+
+/* Feature grid — 4 columns on desktop */
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-grid);
+  margin-top: var(--space-8);
+}
+
+/* Use cases grid — 3 columns on desktop */
+.use-cases__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-grid);
+  margin-top: var(--space-8);
+}
+
+/* Testimonials grid — 3 columns on desktop */
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-grid);
+  margin-top: var(--space-8);
+}
+
+/* Trusted by logos — flexible row */
+.trusted-by__logos {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+  margin-top: var(--space-6);
+}
+
+/* Responsive: Tablet (768px) */
+@media (max-width: 1024px) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .use-cases__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trusted-by__logos {
+    gap: var(--space-6);
+  }
+}
+
+/* Responsive: Mobile (640px) */
+@media (max-width: 768px) {
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .use-cases__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trusted-by__logos {
+    gap: var(--space-4);
+    font-size: var(--font-size-sm);
+  }
+}

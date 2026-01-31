@@ -1,0 +1,110 @@
+/* =========================
+   Hero Section
+   ========================= */
+
+.hero {
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, rgba(99, 102, 241, 0.05) 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.hero__visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.hero__image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 25px 60px rgba(99, 102, 241, 0.15);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  animation: slideUp 0.8s ease-out;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hero__image:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 80px rgba(99, 102, 241, 0.25);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__headline {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  max-width: 600px;
+}
+
+.hero__subheadline {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 500px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .hero__visual {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__headline { 
+    font-size: var(--font-size-2xl); 
+  }
+  .hero__subheadline { 
+    font-size: var(--font-size-sm); 
+  }
+  .hero__actions { 
+    flex-direction: column; 
+  }
+  .hero__actions .btn { 
+    width: 100%; 
+  }
+  .hero__visual {
+    min-height: 300px;
+  }
+  .hero__image {
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.12);
+  }
+}
